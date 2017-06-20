@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='./public/styles.css'>
+    </head>
+    <body>
+        <div class = users-wrapper>
+        {{#users}}
+            <div class = "user-card">
+                <img class = 'thumbnail' src = {{avatar}}>
+                <a class = 'name' href='/{{id}}'>{{name}}</a>                
+                {{#job}} 
+                    <p class = 'hired'>{{job}}, {{company}}</p>
+                {{/job}}
+                {{^job}}
+                    <p class = 'avail'>Available for hire</p>
+                {{/job}}
+            </div>
+        {{/users}}
+        </div>
+    </body>
+</html>
