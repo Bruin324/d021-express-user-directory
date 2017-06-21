@@ -9,7 +9,7 @@ app.set('views', './views');
 app.set('view engine', 'mustache');
 
 app.use('/public', express.static('./public'));
-app.get('/directory', function (req, res) {
+app.get('/', function (req, res) {
     res.render('directory', userData);
 });
 
